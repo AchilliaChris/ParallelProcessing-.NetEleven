@@ -39,7 +39,7 @@ namespace ParallelProcessing
             // Ensure concrete type is BespokeDictionary for internal access to widgets property
             var concrete = dictionary as BespokeDictionary ?? throw new InvalidOperationException("BespokeDictionary not registered as IBespokeDictionary");
 
-            ParallelOptions parallelOptions = new ParallelOptions() { MaxDegreeOfParallelism = Environment.ProcessorCount };
+            ParallelOptions parallelOptions = new ParallelOptions() { MaxDegreeOfParallelism = Environment.ProcessorCount * 2 }; // the processor supports hyperthreading, so we can use more threads than the number of cores for better performance on CPU-bound tasks.
             Widget val, postVat, parval, parpostVat, parOptionsval, parpostOptionsVat, postSingleVat, postForeachVat, postForeachAsyncVat, postOptionsSingleVat, postOptionsForeachVat, parpostOptionsAsyncVat;
             string key = "X0000000067";
             Double rate = 0.2;
