@@ -13,7 +13,7 @@ namespace ParallelProcessing
         void AddVatSpecific(double rate);
         bool MakeWidgets(int size);
         Task<int> ParallelForEachAsyncOptionsVat(ParallelOptions parallelOptions, double rate);
-        Task<int> ParralelForEachOptionsVat(ParallelOptions parallelOptions, double rate);
+        Task<int> ParallelForEachOptionsVat(ParallelOptions parallelOptions, double rate);
         Task<int> ParralelForEachVat(double rate);
         Task<int> ParralelForOptionsVat(ParallelOptions parallelOptions, double rate);
         Task<int> ParralelForVat(double rate);

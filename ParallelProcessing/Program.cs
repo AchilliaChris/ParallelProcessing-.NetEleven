@@ -139,12 +139,12 @@ namespace ParallelProcessing
                 Console.WriteLine("Key not found after ParralelForOptionsVat: " + key);
 
             Console.WriteLine();
-            count = await MeasureAsync("Vat added using dictionary.ParallelForEachOptionsVat().", () => Task.Run(() => concrete.ParralelForEachOptionsVat(parallelOptions, rate)));
+            count = await MeasureAsync("Vat added using dictionary.ParallelForEachOptionsVat().", () => Task.Run(() => concrete.ParallelForEachOptionsVat(parallelOptions, rate)));
             Console.WriteLine("{0}, {1}", "Vat added using dictionary.ParallelForEachOptionsVat(). No of widgets: ", count);
             if (concrete.widgets.TryGetValue(key, out parpostOptionsVat))
                 Console.WriteLine("Key: " + key + " Price: " + parpostOptionsVat.Price);
             else
-                Console.WriteLine("Key not found after ParralelForEachOptionsVat: " + key);
+                Console.WriteLine("Key not found after ParallelForEachOptionsVat: " + key);
 
             Console.WriteLine();
             // Parallel ForEach is clearly faster (great for CPU bound work) but Parallel ForEachAsync is more robust for async operations involving db and api calls.
@@ -153,7 +153,7 @@ namespace ParallelProcessing
             if (concrete.widgets.TryGetValue(key, out parpostOptionsAsyncVat))
                 Console.WriteLine("Key: " + key + " Price: " + parpostOptionsAsyncVat.Price);
             else
-                Console.WriteLine("Key not found after ParralelForEachOptionsVat: " + key);
+                Console.WriteLine("Key not found after ParallelForEachOptionsVat: " + key);
             stopWatch.Stop();
             Console.WriteLine("The total elapsed time is: " + stopWatch.Elapsed);
             Console.WriteLine();

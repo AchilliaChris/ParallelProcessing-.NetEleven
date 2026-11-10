@@ -174,12 +174,12 @@ namespace ParallelProcessingTests
         }
 
         [Fact]
-        public async Task ParralelForEachOptionsVat_Returns_Size()
+        public async Task ParallelForEachOptionsVat_Returns_Size()
         {
             var dict = new BespokeDictionary();
             dict.MakeWidgets(7);
             var options = new ParallelOptions { MaxDegreeOfParallelism = 3 };
-            int returned = await dict.ParralelForEachOptionsVat(options, 0.2);
+            int returned = await dict.ParallelForEachOptionsVat(options, 0.2);
             Assert.Equal(7, returned);
         }
 

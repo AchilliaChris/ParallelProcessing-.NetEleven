@@ -71,7 +71,7 @@ namespace ParallelProcessing
             return count;
         }
 
-        public async Task<int> ParralelForEachOptionsVat(ParallelOptions parallelOptions, Double rate)
+        public async Task<int> ParallelForEachOptionsVat(ParallelOptions parallelOptions, Double rate)
         {
             Double multiplier = rate + 1;
             int count = widgets.Count();
